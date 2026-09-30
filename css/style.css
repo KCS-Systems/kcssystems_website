@@ -1,0 +1,683 @@
+/* =========================================================
+   KCS SYSTEMS
+   Main Stylesheet
+   ========================================================= */
+
+
+/* ================= VARIABLES ================= */
+
+:root {
+    --navy: #101828;
+    --dark-navy: #0b1220;
+    --blue: #2463eb;
+    --blue-dark: #174dcc;
+    --white: #ffffff;
+    --off-white: #f7f8fa;
+    --light-gray: #e5e7eb;
+    --medium-gray: #667085;
+    --text: #101828;
+
+    --container: 1240px;
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: min(90%, var(--container));
+    margin: 0 auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.site-header {
+    width: 100%;
+    background: var(--white);
+    border-bottom: 1px solid var(--light-gray);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: var(--blue);
+}
+
+.nav-contact {
+    border: 1px solid var(--navy);
+    padding: 11px 20px;
+}
+
+.nav-contact:hover {
+    background: var(--navy);
+    color: var(--white) !important;
+}
+
+
+/* ================= COMMON TYPOGRAPHY ================= */
+
+.section-label,
+.eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    color: var(--blue);
+}
+
+.section-heading {
+    margin-bottom: 65px;
+}
+
+.section-heading h2 {
+    margin-top: 15px;
+
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 760px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 0;
+}
+
+.hero-content {
+    width: min(90%, 1240px);
+}
+
+.eyebrow {
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    max-width: 1100px;
+
+    font-size: clamp(4rem, 8vw, 7.5rem);
+    line-height: 0.93;
+    letter-spacing: -0.065em;
+    font-weight: 600;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--blue);
+}
+
+.hero-description {
+    max-width: 630px;
+
+    margin-top: 40px;
+
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--medium-gray);
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    margin-top: 45px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 35px;
+
+    padding: 17px 24px;
+
+    font-weight: 600;
+}
+
+.button-primary {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.button-primary:hover {
+    background: var(--blue-dark);
+}
+
+.arrow {
+    font-size: 1.3rem;
+}
+
+.text-link {
+    font-weight: 600;
+}
+
+.text-link span {
+    margin-left: 8px;
+}
+
+
+/* ================= INTRO ================= */
+
+.intro {
+    padding: 120px 0;
+    background: var(--off-white);
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 80px;
+}
+
+.intro h2 {
+    max-width: 900px;
+
+    font-size: clamp(2.6rem, 5vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.055em;
+    font-weight: 500;
+}
+
+.intro h2 em {
+    color: var(--blue);
+    font-style: normal;
+}
+
+.intro-grid > div:last-child > p {
+    max-width: 700px;
+
+    margin-top: 35px;
+
+    font-size: 1.15rem;
+    color: var(--medium-gray);
+}
+
+
+/* ================= SERVICES ================= */
+
+.services {
+    padding: 130px 0;
+}
+
+.service-row {
+    display: grid;
+    grid-template-columns: 100px 1.2fr 1fr;
+    gap: 45px;
+
+    padding: 60px 0;
+
+    border-top: 1px solid var(--light-gray);
+}
+
+.service-row:last-child {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.service-number {
+    font-size: 0.85rem;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.service-title h3 {
+    max-width: 450px;
+
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+    font-weight: 500;
+}
+
+.service-description > p {
+    margin-bottom: 25px;
+
+    font-size: 1.05rem;
+    color: var(--medium-gray);
+}
+
+.service-description ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-description li {
+    position: relative;
+
+    padding-left: 20px;
+
+    font-size: 0.95rem;
+}
+
+.service-description li::before {
+    content: "—";
+
+    position: absolute;
+    left: 0;
+
+    color: var(--blue);
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 140px 0;
+
+    background: var(--navy);
+    color: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 100px;
+}
+
+.light-label {
+    color: #91afff;
+}
+
+.about h2 {
+    max-width: 700px;
+
+    margin-top: 25px;
+
+    font-size: clamp(3rem, 5vw, 5.2rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+    font-weight: 500;
+}
+
+.about-copy {
+    align-self: end;
+}
+
+.about-copy p {
+    margin-bottom: 25px;
+
+    color: #cbd1dc;
+    font-size: 1.05rem;
+}
+
+.about-copy .large-copy {
+    color: var(--white);
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+
+/* ================= APPROACH ================= */
+
+.approach {
+    padding: 130px 0;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.approach-card {
+    min-height: 340px;
+
+    padding: 40px 30px;
+
+    border-right: 1px solid var(--light-gray);
+}
+
+.approach-card:last-child {
+    border-right: none;
+}
+
+.approach-card span {
+    display: block;
+
+    margin-bottom: 80px;
+
+    color: var(--blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.approach-card h3 {
+    margin-bottom: 20px;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: -0.035em;
+}
+
+.approach-card p {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+}
+
+
+/* ================= CONTACT CTA ================= */
+
+.contact-cta {
+    padding: 130px 0;
+
+    background: var(--blue);
+    color: var(--white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+}
+
+.contact-label {
+    color: #dce6ff;
+}
+
+.contact-cta h2 {
+    max-width: 700px;
+
+    margin-top: 20px;
+
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    font-weight: 500;
+}
+
+.contact-content {
+    align-self: end;
+}
+
+.contact-content p {
+    max-width: 440px;
+
+    margin-bottom: 35px;
+
+    font-size: 1.2rem;
+    color: #e6ecff;
+}
+
+.contact-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.contact-email span {
+    font-size: 1.4rem;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 80px 0 30px;
+
+    background: var(--dark-navy);
+    color: var(--white);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+
+    padding-bottom: 80px;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    max-width: 300px;
+    color: #98a2b3;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #91afff;
+}
+
+.footer-contact p {
+    margin-bottom: 12px;
+    color: #98a2b3;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #283244;
+
+    color: #98a2b3;
+    font-size: 0.85rem;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .nav {
+        gap: 18px;
+    }
+
+    .nav a:not(.nav-contact) {
+        display: none;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 12vw, 6rem);
+    }
+
+    .intro-grid,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-row {
+        grid-template-columns: 60px 1fr;
+    }
+
+    .service-description {
+        grid-column: 2;
+    }
+
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .approach-card:nth-child(2) {
+        border-right: none;
+    }
+
+    .approach-card:nth-child(-n+2) {
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 88%;
+    }
+
+    .nav-container {
+        height: 72px;
+    }
+
+    .nav-contact {
+        padding: 9px 14px;
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        font-size: 3.4rem;
+    }
+
+    .hero-description {
+        font-size: 1.05rem;
+    }
+
+    .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .intro,
+    .services,
+    .approach,
+    .about,
+    .contact-cta {
+        padding: 85px 0;
+    }
+
+    .service-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-description {
+        grid-column: auto;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-card,
+    .approach-card:nth-child(2) {
+        border-right: none;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .approach-card:last-child {
+        border-bottom: none;
+    }
+
+    .approach-card span {
+        margin-bottom: 50px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
